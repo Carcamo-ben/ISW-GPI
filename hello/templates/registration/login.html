@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+<div class="jumbotron text-center">
+{% if form.errors %}
+<p><font color="white">
+Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+{% if next %}
+    {% if user.is_authenticated %}
+    <p><font color="white">Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.</font></p>
+    {% else %}
+    <p><font color="white">Please login to see this page.</font></p>
+    {% endif %}
+{% endif %}
+<div align="center">
+    <form method="post" action="{% url 'login' %}" >
+    {% csrf_token %}
+    <table>
+    <tr>
+        <td><font color="white">Ingrese Usuario:</font></td>
+        <td>{{ form.username }}</td>
+    </tr>
+    <tr>
+        <td><font color="white">Contraseña:</font></td>
+        <td>{{ form.password }}</td>
+    </tr>
+    </table>
+</div>
+<br>
+<input type="submit" value="Iniciar Sesion" />
+<input type="hidden" name="next" value="{{ next }}" />
+</form>
+<br>
+{# Assumes you setup the password_reset view in your URLconf #}
+<p><a href="{% url 'password_reset' %}">Perdiste tu contraseña?</a></p>
+</div>
+
+{% endblock %}
