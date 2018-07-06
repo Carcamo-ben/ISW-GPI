@@ -10,11 +10,12 @@ def index(request):
 
 
 def db(request):
-	materiales=MATERIALES(Nombre="Seider",Cantidad=2)
+	material=MATERIALES(Nombre="Seider",Cantidad=2)
     greeting = Greeting()
     greeting.save()
-	materiales.save
+	material.save
     greetings = Greeting.objects.all()
+    materiales=MATERIALES.objects.all()
 
-    return render(request, 'db.html', {'greetings': greetings,materiales})
+    return render(request, 'db.html', {'greetings': greetings,'materiales':})
 
