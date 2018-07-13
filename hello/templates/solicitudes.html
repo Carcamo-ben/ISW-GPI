@@ -2,7 +2,7 @@
 {% load staticfiles %}
 
 {% block content %}
-{% csrf_token %}
+
 <html lang="en-us" >
 <head>
 <title>Añadir Solicitud</title>
@@ -35,7 +35,7 @@
   data-admin-utc-offset="0">
 
 
-<form enctype="multipart/form-data" action="" method="post" id="solicitudes_form" novalidate><input type='hidden' name='csrfmiddlewaretoken' value='1ScoFIaSqxlEQtjxLx7r3Yns7BMaJHC4lTTnunaFKCIEAI1smJcSCOfDpeys5fy2' />
+<form enctype="multipart/form-data" action="" method="post" id="solicitudes_form" novalidate><input type='hidden' name='csrfmiddlewaretoken' value='1ScoFIaSqxlEQtjxLx7r3Yns7BMaJHC4lTTnunaFKCIEAI1smJcSCOfDpeys5fy2' />{% csrf_token %}
 <div>
 
 
