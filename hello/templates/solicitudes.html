@@ -2,8 +2,234 @@
 {% load staticfiles %}
 
 {% block content %}
-<form action="" method="post">
 {% csrf_token %}
-{{form}}
-<input type="submit" value="Submit" onclick={{form.save}}/>
+<html lang="en-us" >
+<head>
+<title>Añadir Solicitud</title>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css" />
+
+
+<script type="text/javascript" src="/admin/jsi18n/"></script>
+<script type="text/javascript" src="/static/admin/js/vendor/jquery/jquery.js"></script>
+<script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
+<script type="text/javascript" src="/static/admin/js/core.js"></script>
+<script type="text/javascript" src="/static/admin/js/admin/RelatedObjectLookups.js"></script>
+<script type="text/javascript" src="/static/admin/js/actions.js"></script>
+<script type="text/javascript" src="/static/admin/js/urlify.js"></script>
+<script type="text/javascript" src="/static/admin/js/prepopulate.js"></script>
+<script type="text/javascript" src="/static/admin/js/vendor/xregexp/xregexp.js"></script>
+<script type="text/javascript" src="/static/admin/js/calendar.js"></script>
+<script type="text/javascript" src="/static/admin/js/admin/DateTimeShortcuts.js"></script>
+
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.css" />
+    
+
+<meta name="robots" content="NONE,NOARCHIVE" />
+</head>
+
+
+<body class=" app-hello model-solicitudes change-form"
+  data-admin-utc-offset="0">
+
+
+<form enctype="multipart/form-data" action="" method="post" id="solicitudes_form" novalidate><input type='hidden' name='csrfmiddlewaretoken' value='1ScoFIaSqxlEQtjxLx7r3Yns7BMaJHC4lTTnunaFKCIEAI1smJcSCOfDpeys5fy2' />
+<div>
+
+
+
+
+
+
+
+  <fieldset class="module aligned ">
+    
+    
+    
+        <div class="form-row field-Fecha_Vigencia">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_Fecha_Vigencia">Fecha Vigencia:</label>
+                        
+                            <input type="text" name="Fecha_Vigencia" class="vDateField" size="10" required id="id_Fecha_Vigencia" />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-Version">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_Version">Version:</label>
+                        
+                            <input type="number" name="Version" class="vIntegerField" required id="id_Version" />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-Estado">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_Estado">Estado:</label>
+                        
+                            <input type="number" name="Estado" class="vIntegerField" required id="id_Estado" />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-Centro_de_Costo">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_Centro_de_Costo">Centro de Costo:</label>
+                        
+                            <input type="text" name="Centro_de_Costo" class="vTextField" maxlength="50" required id="id_Centro_de_Costo" />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-Documento">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_Documento">Documento:</label>
+                        
+                            <input type="text" name="Documento" class="vTextField" maxlength="10" required id="id_Documento" />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-Solicitado_por">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_Solicitado_por">Solicitado por:</label>
+                        
+                            <input type="text" name="Solicitado_por" class="vTextField" maxlength="50" required id="id_Solicitado_por" />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-Fecha_Solicitud">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_Fecha_Solicitud">Fecha Solicitud:</label>
+                        
+                            <input type="text" name="Fecha_Solicitud" class="vDateField" size="10" required id="id_Fecha_Solicitud" />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-Fecha_Requerida">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_Fecha_Requerida">Fecha Requerida:</label>
+                        
+                            <input type="text" name="Fecha_Requerida" class="vDateField" size="10" required id="id_Fecha_Requerida" />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="submit-row">
+<input type="submit" value="Save" class="default" name="_save" />
+
+
+<input type="submit" value="Save and add another" name="_addanother" />
+<input type="submit" value="Save and continue editing" name="_continue" />
+</div>
+
+
+
+    <script type="text/javascript"
+            id="django-admin-form-add-constants"
+            src="/static/admin/js/change_form.js"
+            
+                data-model-name="solicitudes"
+            >
+    </script>
+
+
+
+
+<script type="text/javascript"
+        id="django-admin-prepopulated-fields-constants"
+        src="/static/admin/js/prepopulate_init.js"
+        data-prepopulated-fields="[]">
+</script>
+
+
+</div>
+</form></div>
+
+        
+        <br class="clear" />
+    </div>
+    <!-- END Content -->
+
+    <div id="footer"></div>
+</div>
+<!-- END Container -->
+
+</body>
+</html>
 {% endblock %}
