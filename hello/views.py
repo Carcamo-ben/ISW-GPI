@@ -18,3 +18,10 @@ def db(request):
 
     return render(request, 'db.html', {'greetings': greetings})
 
+def profile(request):
+    # return HttpResponse('Hello from Python!')
+    return render(request, 'profile.html')
+    
+def solicitudes(request):
+    # return HttpResponse('Hello from Python!')
+    return render(request, 'solicitudes.html')

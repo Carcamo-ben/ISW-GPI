@@ -8,9 +8,9 @@ class SOLICITUDES(models.Model):
     Fecha_Vigencia = models.DateField()
     Version = models.IntegerField()
     Estado = models.IntegerField()
-    Centro_de_Costo = models.CharField(max_lenght=50)
-    Documento = models.CharField(max_lenght=10)
-    Solicitado_por = models.CharField(max_lenght=50)
+    Centro_de_Costo = models.CharField(max_length=50)
+    Documento = models.CharField(max_length=10)
+    Solicitado_por = models.CharField(max_length=50)
     Fecha_Solicitud = models.DateField()
     Fecha_Requerida = models.DateField()
 
