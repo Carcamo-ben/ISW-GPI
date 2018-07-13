@@ -21,5 +21,5 @@ def solicitudes(request):
         form=SOLICITUDESForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/helper/')
+            return HttpResponseRedirect('./helper/')
     return render(request, 'solicitudes.html',{'form':SOLICITUDESForm()})
