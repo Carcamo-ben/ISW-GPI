@@ -1,9 +1,6 @@
 from django.db import models
 
 # Create your models here.
-class Greeting(models.Model):
-    when = models.DateTimeField('date created', auto_now_add=True)
-
 class SOLICITUDES(models.Model):
 	Fecha_Vigencia = models.DateField()
 	Version = models.IntegerField()
@@ -13,6 +10,9 @@ class SOLICITUDES(models.Model):
 	Solicitado_por = models.CharField(max_length=50)
 	Fecha_Solicitud = models.DateField()
 	Fecha_Requerida = models.DateField()
+
+class Solicitud_helper(models.Model):
+	Solicitud=models.ForeignKey(SOLICITUDES, on_delete=models.CASCADE)
 	CC = models.IntegerField(default=None)
 	Sol = models.IntegerField(default=None)
 	Item = models.IntegerField(default=None)
