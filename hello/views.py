@@ -19,5 +19,5 @@ def solicitudes(request):
         form=SOLICITUDESForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect(reverse('app_name:url'))
+            return HttpResponseRedirect(profile)
     return render(request, 'solicitudes.html',{'form':SOLICITUDESForm()})
