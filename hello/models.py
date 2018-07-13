@@ -13,8 +13,6 @@ class SOLICITUDES(models.Model):
     Solicitado_por = models.CharField(max_length=50)
     Fecha_Solicitud = models.DateField()
     Fecha_Requerida = models.DateField()
-
-class SOLICITUDES2(models.Model):
 	CC = models.IntegerField()
 	Sol = models.IntegerField()
 	Item = models.IntegerField()
