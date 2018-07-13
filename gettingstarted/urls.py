@@ -16,5 +16,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/profile/', hello.views.profile, name='perfil'),
-    path('accounts/profile/', hello.views.solicitudes, name='solicitudes'),
+    path('solicitudes', hello.views.solicitudes, name='solicitudes'),
 ]
