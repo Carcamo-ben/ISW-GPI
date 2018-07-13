@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import *
 from .models import *
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 def index(request):
@@ -14,5 +15,9 @@ def profile(request):
     return render(request, 'profile.html')
     
 def solicitudes(request):
-    form=SOLICITUDESForm(request.POST)
+    if request.method == 'POST':
+        form=SOLICITUDESForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('app_name:url'))
     return render(request, 'solicitudes.html',{'form':form})
