@@ -20,4 +20,4 @@ def solicitudes(request):
         if form.is_valid():
             form.save()
             return HttpResponseRedirect(reverse('app_name:url'))
-    return render(request, 'solicitudes.html',{'form':form})
+    return render(request, 'solicitudes.html',{'form':SOLICITUDESForm()})
