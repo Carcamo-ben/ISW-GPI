@@ -8,7 +8,7 @@
 <title>Añadir Solicitud</title>
 <link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" />
 <link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css" />
-
+</head>
 
 <script type="text/javascript" src="/admin/jsi18n/"></script>
 <script type="text/javascript" src="/static/admin/js/vendor/jquery/jquery.js"></script>
@@ -27,54 +27,14 @@
     <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.css" />
     
 
-<meta name="robots" content="NONE,NOARCHIVE" />
-</head>
-
-
-<body class=" app-hello model-solicitudes change-form"
-  data-admin-utc-offset="0">
-
+<body>
 
 {{form}}
 
 
 <div class="submit-row">
-<input type="submit" value="Save" class="default" name="_save" onclick={{form.save}} />
+<button> value="Save" class="default" name="_save" onclick={{form.save}} </button>
 
-
-<input type="submit" value="Save and add another" name="_addanother" />
-<input type="submit" value="Save and continue editing" name="_continue" />
-</div>
-
-
-
-    <script type="text/javascript"
-            id="django-admin-form-add-constants"
-            src="/static/admin/js/change_form.js"
-            
-                data-model-name="solicitudes"
-            >
-    </script>
-
-
-
-
-<script type="text/javascript"
-        id="django-admin-prepopulated-fields-constants"
-        src="/static/admin/js/prepopulate_init.js"
-        data-prepopulated-fields="[]">
-</script>
-
-
-</div>
-</form></div>
-
-        
-        <br class="clear" />
-    </div>
-    <!-- END Content -->
-
-    <div id="footer"></div>
 </div>
 <!-- END Container -->
 
