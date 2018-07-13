@@ -23,5 +23,5 @@ def profile(request):
     return render(request, 'profile.html')
     
 def solicitudes(request):
-    # return HttpResponse('Hello from Python!')
-    return render(request, 'solicitudes.html')
+    form=SOLICITUDESForm
+    return render(request, 'solicitudes.html',{'form':form})
