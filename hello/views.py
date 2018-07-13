@@ -13,11 +13,13 @@ def index(request):
 def profile(request):
     # return HttpResponse('Hello from Python!')
     return render(request, 'profile.html')
-    
+def helper(request):
+    # return HttpResponse('Hello from Python!')
+    return render(request, 'helper.html')
 def solicitudes(request):
     if request.method == 'POST':
         form=SOLICITUDESForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect(profile)
+            return HttpResponseRedirect('/helper/')
     return render(request, 'solicitudes.html',{'form':SOLICITUDESForm()})
