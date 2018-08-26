@@ -9,7 +9,7 @@
 	    <h1><font color="white">GPI Hermes</h1>
 	    <h1>Bienvenido {{ user.get_username }}</h1>
 	    {%if user.is_superuser %}
-	    	<a type="button" class="btn btn-lg btn-default" href="po/">Ver Ordenes Pendientes</a>
+	    	<a type="button" class="btn btn-lg btn-default" href="pos/">Ver Ordenes Pendientes</a>
 		{% else %}
 		    <a type="button" class="btn btn-lg btn-default" href="solicitudes/">Realizar solicitud</a>
 		    
