@@ -21,7 +21,7 @@ def helper(request):
         form=HELPERForm(request.POST)
         if form:
             form.save()
-            return HttpResponseRedirect('./Succes/')
+            return HttpResponseRedirect('./succes/')
     return render(request, 'helper.html',{'form':HELPERForm()})
 def solicitudes(request):
     if request.method == 'POST':

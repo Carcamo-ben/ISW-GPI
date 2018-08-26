@@ -8,8 +8,13 @@
 	    </a>
 	    <h1><font color="white">GPI Hermes</h1>
 	    <h1>Bienvenido {{ user.get_username }}</h1>
-	    <a type="button" class="btn btn-lg btn-default" href="solicitudes/">Realizar solicitud</a>
-	    </font>
+	    {%if user.is_superuser %}
+	    	<a type="button" class="btn btn-lg btn-default" href="solicitudes/">Ver Ordenes Pendientes</a>
+		{% else %}
+		    <a type="button" class="btn btn-lg btn-default" href="solicitudes/">Realizar solicitud</a>
+		    
+		{% endif %}
+	</font>
   </div>
 
 </div>
