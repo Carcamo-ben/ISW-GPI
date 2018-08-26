@@ -38,3 +38,6 @@ class PROVEEDORES(models.Model):
     Direccion=models.CharField(max_length=150)
     Rut=models.CharField(max_length=50)
     Banco=models.CharField(max_length=50)
+    Material1=models.CharField(max_length=100,default=None)
+    Material2=models.CharField(max_length=100,default=None)
+    Material3=models.CharField(max_length=100,default=None)
