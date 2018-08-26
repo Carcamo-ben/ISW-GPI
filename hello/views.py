@@ -22,7 +22,7 @@ def helper(request):
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('./Succes/')
-    return render(request, 'helper.html',{'form':SOLICITUDESForm()})
+    return render(request, 'helper.html',{'form':HELPERForm()})
 def solicitudes(request):
     if request.method == 'POST':
         form=SOLICITUDESForm(request.POST)
