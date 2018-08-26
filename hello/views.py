@@ -13,9 +13,16 @@ def index(request):
 def profile(request):
     # return HttpResponse('Hello from Python!')
     return render(request, 'profile.html')
+def Succes(request):
+    return render(request,'Succes.html')
 def helper(request):
     # return HttpResponse('Hello from Python!')
-    return render(request, 'helper.html')
+    if request.method == 'POST':
+        form=HELPERForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('./Succes/')
+    return render(request, 'helper.html',{'form':SOLICITUDESForm()})
 def solicitudes(request):
     if request.method == 'POST':
         form=SOLICITUDESForm(request.POST)

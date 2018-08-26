@@ -8,5 +8,10 @@ class SOLICITUDESForm(ModelForm):
 		'Documento','Solicitado_por','Fecha_Solicitud','Fecha_Requerida'
 		]
 
+class HELPERForm(ModelForm):
+	class Meta:
+		model = Solicitud_helper
+		fields = ['CC','Sol','Item','Descripcion','Cant','Unid','Cert','AoD' 
+		]
 
-#,'CC','Sol','Item','Descripcion','Cant','Unid','Cert','AoD' 
+#,
