@@ -6,14 +6,10 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.messages import get_messages
 
-
-
 # Create your views here.
 def index(request):
     # return HttpResponse('Hello from Python!')
     return render(request, 'index.html')
-
-
 def profile(request):
     # return HttpResponse('Hello from Python!')
     return render(request, 'profile.html')
@@ -23,9 +19,7 @@ def helper(request):
     # return HttpResponse('Hello from Python!')
     if request.method == 'POST':
         form=HELPERForm(request.POST)
-        storage = get_messages(request)
-        for message in storage:
-            HELPERForm.Solicitud_id=message
+        HELPERForm.Solicitud=SOLICITUDES.objects.all().order_by('-id')[0]
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('./Succes/')
@@ -34,7 +28,6 @@ def solicitudes(request):
     if request.method == 'POST':
         form=SOLICITUDESForm(request.POST)
         if form.is_valid():
-            messages.info(request,SOLICITUDESForm.id)
             form.save()
             return HttpResponseRedirect('./helper/')
     return render(request, 'solicitudes.html',{'form':SOLICITUDESForm()})
