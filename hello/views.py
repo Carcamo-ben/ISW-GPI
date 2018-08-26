@@ -19,14 +19,14 @@ def helper(request):
     # return HttpResponse('Hello from Python!')
     if request.method == 'POST':
         form=HELPERForm(request.POST)
-        if form.is_valid():
+        if form:
             form.save()
             return HttpResponseRedirect('./Succes/')
     return render(request, 'helper.html',{'form':HELPERForm()})
 def solicitudes(request):
     if request.method == 'POST':
         form=SOLICITUDESForm(request.POST)
-        if form:
+        if form.is_valid():
             form.save()
             return HttpResponseRedirect('./helper/')
     return render(request, 'solicitudes.html',{'form':SOLICITUDESForm()})
