@@ -18,7 +18,7 @@ class Solicitud_helper(models.Model):
 	Item = models.IntegerField(default=None)
 	Descripcion = models.CharField(max_length=100,default=None)
 	Cant = models.IntegerField(default=None)
-	Unid = models.IntegerField(default=None)
+	Unid = models.CharField(default=None)
 	Cert = models.CharField(max_length=10,default=None)
 	AoD = models.CharField(max_length=20,default=None)
 
@@ -35,3 +35,6 @@ class MATERIALES(models.Model):
 
 class PROVEEDORES(models.Model):
     Nombre = models.CharField(max_length=50)
+    Direccion=models.CharField(max_length=150)
+    Rut=models.CharField(max_length=50)
+    Banco=models.CharField(max_length=50)
