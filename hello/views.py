@@ -26,7 +26,7 @@ def helper(request):
 def solicitudes(request):
     if request.method == 'POST':
         form=SOLICITUDESForm(request.POST)
-        if form.is_valid():
+        if form:
             form.save()
             return HttpResponseRedirect('./helper/')
     return render(request, 'solicitudes.html',{'form':SOLICITUDESForm()})
