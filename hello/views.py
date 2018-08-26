@@ -30,3 +30,7 @@ def solicitudes(request):
             form.save()
             return HttpResponseRedirect('./helper/')
     return render(request, 'solicitudes.html',{'form':SOLICITUDESForm()})
+
+def po(request):
+    pos=PO.objects.all().filter(Estado=1)
+    return render(request,'po.html',{'pos':pos})

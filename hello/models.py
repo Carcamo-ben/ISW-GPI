@@ -41,3 +41,8 @@ class PROVEEDORES(models.Model):
     Material1=models.CharField(max_length=100,default=None)
     Material2=models.CharField(max_length=100,default=None)
     Material3=models.CharField(max_length=100,default=None)
+
+class PO(models.Model):
+	Proveedor=models.ForeignKey(PROVEEDORES, on_delete=models.CASCADE)
+	Estado=models.IntegerField(default=1)
+	Importe=models.IntegerField(default=0)

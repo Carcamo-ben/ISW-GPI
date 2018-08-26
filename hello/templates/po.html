@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+  <div class="container">
+
+
+<h2>Ordenes Pendientes</h2>
+
+<ul>
+
+{% for po in pos %}
+
+    <li>{{ po.Proveedor.Nombre  }}</li>
+    <li>{{ po.Proveedor.Direccion }}</li>
+    <li>{{ po.Proveedor.Rut }}</li>
+    <li>{{ po.Proveedor.Banco }}</li>
+    <li>{{ po.importe }}</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+{% endblock %}
