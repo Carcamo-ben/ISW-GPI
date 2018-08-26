@@ -20,7 +20,6 @@ def helper(request):
     if request.method == 'POST':
         form=HELPERForm(request.POST)
         #HELPERForm.Solicitud=SOLICITUDES.objects.all().order_by('-id')[0]
-        HELPERForm.Solicitud=9
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('./Succes/')

@@ -11,7 +11,7 @@ class SOLICITUDESForm(ModelForm):
 class HELPERForm(ModelForm):
 	class Meta:
 		model = Solicitud_helper
-		fields = ['CC','Sol','Item','Descripcion','Cant','Unid','Cert','AoD' 
+		fields = ['Solicitud','CC','Sol','Item','Descripcion','Cant','Unid','Cert','AoD' 
 		]
 
 #,
